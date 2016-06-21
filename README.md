@@ -18,3 +18,7 @@ The ECMAScript core is optional.
 ## Usage
 
 See the tutorial.html file.
+
+## License
+
+Generation is under the MIT license (see LICENSE.txt)

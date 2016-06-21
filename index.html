@@ -13,6 +13,32 @@
 				<h2>The CSS3 based framework</h2>
 			</div>
 		</header>
+		<div class="modal" id="modal1">
+			<div class="modal-content">
+				<header class="container color-aqua">
+					<span class="close-button" data-close-modal="modal1">Close</span>
+					<h1>Modal #1</h1>
+				</header>
+				<section class="container color-white">
+					<p>
+						This is a modal!
+					</p>
+				</section>
+			</div>
+		</div>
+		<div class="modal" id="modal2">
+			<div class="modal-content">
+				<header class="container color-aqua">
+					<span class="close-button" data-close-modal="modal2">Close</span>
+					<h1>Modal #2</h1>
+				</header>
+				<section class="container color-white">
+					<p>
+						This is a modal too!
+					</p>
+				</section>
+			</div>
+		</div>
 		<main class="container color-white">
 			<section class="section border">
 				<header class="container color-grey">
@@ -335,6 +361,33 @@
 					Restore
 				</div>
 			</section>
+			<section class="section border">
+				<header class="container color-grey">
+					<h3>Modals</h3>
+				</header>
+				<p>
+					A modal is a sub-window styled with CSS, but powered by ECMAScript/JavaScript:
+				</p>
+				<button class="button color-red text-color-light-grey" data-open-modal="modal1" type="button">
+					Show modal 1
+				</button>
+				<button class="button color-green text-color-light-grey" data-open-modal="modal2" type="button">
+					Show modal 2
+				</button>
+				<p>
+					The ECMAScript/JavaScript script for this modals are:
+				</p>
+				<code>
+					Generation.ready();
+				</code>
+				<p>
+					Yes, Generation initializes the modals at start! you only need these HTML attributes:
+				</p>
+				<ul class="list">
+					<li>data-open-modal="<i>id</i>": When click this element, open the modal with ID</li>
+					<li>data-close-modal="<i>id</i>": When click this element, close the modal with ID</li>
+				</ul>
+			</section>
 		</main>
 		<footer class="fcontainer center color-black">
 			<p>
@@ -346,6 +399,7 @@
 		<script>
 			if(typeof Generation !== "undefined")
 			{
+				Generation.ready();
 				if(Generation.compatible("1"))
 				{
 					Generation.get("btn1").click(function()
