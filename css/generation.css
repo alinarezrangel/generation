@@ -29,7 +29,7 @@ html, body {
 	margin-bottom: 8px;
 }
 
-.grid, .col, .card, .form, .navigation, .top-navigation, .side-navigation, .section, .container, .box {
+.list, .grid, .col, .card, .form, .navigation, .top-navigation, .side-navigation, .section, .container, .box {
 	display: block;
 }
 
@@ -286,6 +286,16 @@ html, body {
 .close-button {
 	display: block;
 	float: right;
+}
+
+.list > li {
+	margin-top: 6px;
+	list-style-type: disc;
+}
+
+.list.no-style > li {
+	list-style-type: none;
+	border-top: 2px solid #ccc;
 }
 
 /* utilities */

@@ -123,3 +123,7 @@ var Generation = Generation || {
 	}
 };
 
+window.addEventListener("load", function()
+{
+	Generation.ready();
+});
