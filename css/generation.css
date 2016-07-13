@@ -246,6 +246,10 @@ html, body {
 
 .table th, .table td {
 	border: 1px solid #ccc;;
+<<<<<<< HEAD
+=======
+	padding: 8px;
+>>>>>>> 53cdc67266a054ecc04513c2d5b26d07bf09e606
 }
 
 .modal {
