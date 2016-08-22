@@ -145,6 +145,11 @@ html, body {
 	cursor: pointer;
 }
 
+.top-navigation.no-inner-border > a, .top-navigation.no-inner-border > .link {
+	border-botton: 0;
+}
+
+
 .top-navigation > a:hover, .top-navigation > .link:hover {
 	border-bottom: 5px solid #ccc;
 	transition: border-bottom 0.2s ease 0.01s;
@@ -253,10 +258,7 @@ html, body {
 
 .table th, .table td {
 	border: 1px solid #ccc;;
-<<<<<<< HEAD
-=======
 	padding: 8px;
->>>>>>> 53cdc67266a054ecc04513c2d5b26d07bf09e606
 }
 
 .modal {
@@ -335,14 +337,6 @@ html, body {
 .padding-32 {padding: 32px;}
 .padding-64 {padding: 64px;}
 
-.bs-1 {border-width: 1px;}
-.bs-2 {border-width: 2px;}
-.bs-4 {border-width: 4px;}
-.bs-8 {border-width: 8px;}
-.bs-16 {border-width: 16px;}
-.bs-32 {border-width: 32px;}
-.bs-64 {border-width: 64px;}
-
 .no-border {
 	border: none;
 }
@@ -363,6 +357,19 @@ html, body {
 .no-border-left {border-left: none;}
 .no-border-right {border-right: none;}
 .no-border-bottom {border-bottom: none;}
+
+.border-top {border-top: 1px solid #ccc;}
+.border-left {border-left: 1px solid #ccc;}
+.border-right {border-right: 1px solid #ccc;}
+.border-bottom {border-bottom: 1px solid #ccc;}
+
+.bs-1 {border-width: 1px;}
+.bs-2 {border-width: 2px;}
+.bs-4 {border-width: 4px;}
+.bs-8 {border-width: 8px;}
+.bs-16 {border-width: 16px;}
+.bs-32 {border-width: 32px;}
+.bs-64 {border-width: 64px;}
 
 .total-width {width: 100vw;}
 .total-height {height: 100vh;}
@@ -425,11 +432,12 @@ html, body {
 .no-wrap {flex-wrap: nowrap;}
 .wrap-reverse {flex-wrap: wrap-reverse;}
 
-.wrap-start {align-content: flex-start;}
-.wrap-end {align-content: flex-end;}
-.wrap-space-between {align-content: space-between;}
-.wrap-space-around {align-content: space-around;}
-.wrap-center {align-content: center;}
+.wrap-start, .content-start {align-content: flex-start;}
+.wrap-end, .content-end {align-content: flex-end;}
+.wrap-space-between, .content-space-between {align-content: space-between;}
+.wrap-space-around, .content-space-around {align-content: space-around;}
+.wrap-center, .content-center {align-content: center;}
+.wrap-stretch, .content-stretch {align-content: stretch;}
 
 .text-tiny {font-size: 0.7em;}
 .text-small {font-size: 0.9em;}
