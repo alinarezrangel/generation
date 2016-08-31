@@ -178,10 +178,13 @@ html, body {
 	border-bottom: 0;
 }
 
-
 .top-navigation > a:hover, .top-navigation > .link:hover {
 	border-bottom: 5px solid #ccc;
 	transition:    border-bottom 0.2s ease 0.01s;
+}
+
+.top-navigation.no-inner-border > a:hover, .top-navigation.no-inner-border > .link:hover {
+	border-bottom: 0;
 }
 
 .side-navigation {
