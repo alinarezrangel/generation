@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Generation - A CSS3 based framework</title>
+		<meta charset="UTF-8">
+		<link href="../generation/css/generation.css" rel="stylesheet"/>
+		<link href="../generation/css/pallete_basics.css" rel="stylesheet"/>
+		<link href="../style.css" rel="stylesheet"/>
+		<script src="../generation/js/generation.js"></script>
+	</head>
+	<body class="color-light-grey">
+		<nav class="top-navigation color-dark-aqua">
+			<a href="../index.html">Home</a>
+			<a href="../about.html">About Generation</a>
+			<a href="../download.html">Download</a>
+			<a href="../docs.html">Documentation</a>
+			<a href="../guide.html">Tutorial</a>
+			<a href="../others.html">Others</a>
+		</nav>
+		<header class="container">
+			<div class="flexible center padding-16">
+				<h1 class="text-jumbo-5">Generation</h1>
+				<h2 class="text-ultra-big">Layouts: Blocks, Flexibles and boxes</h2>
+			</div>
+		</header>
+		<div class="row wrap justify-stretch" style="margin-top: 64px;">
+			<div class="col f1 no-padding border no-border-left bs-2 border-color-dark-grey color-white">
+				<nav class="side-navigation no-margin no-padding">
+					<a href="using.html">
+						Using Generation 1
+					</a>
+					<a href="text.html">
+						Text: sizes and families
+					</a>
+					<a href="colors.html">
+						Colors
+					</a>
+					<a href="palletes.html">
+						Colors: Palletes
+					</a>
+					<a href="layouts.html">
+						Layouts: Blocks, flexibles and boxes
+					</a>
+					<a href="blocks.html">
+						Layouts: Blocks
+					</a>
+					<a href="flexibles.html">
+						Layouts: Flexibles
+					</a>
+					<a href="boxes.html">
+						Layouts: Boxes
+					</a>
+					<a href="list.html">
+						Lists
+					</a>
+					<a href="tables.html">
+						Tables
+					</a>
+					<a href="borders.html">
+						Borders
+					</a>
+					<a href="spacing.html">
+						Margin and padding
+					</a>
+					<a href="button.html">
+						Buttons
+					</a>
+					<a href="grid.html">
+						Grids: grid container
+					</a>
+					<a href="row.html">
+						Grids: rows and columns
+					</a>
+					<a href="col.html">
+						Grids: columns
+					</a>
+					<a href="navigation.html">
+						Navigations: normal, top and side
+					</a>
+					<a href="form.html">
+						Forms
+					</a>
+					<a href="modal.html">
+						Modals
+					</a>
+				</nav>
+			</div>
+			<main class="col f6 padding-16">
+				<section class="container no-padding border bs-2 border-color-grey">
+					<div class="container color-grey">
+						<h2>Layouts: Blocks, Flexibles and boxes</h2>
+					</div>
+					<div class="padding-16">
+						<p>
+							In Generation, the layout system is divided into three main groups:
+						</p>
+						<section class="container no-padding border bs-2 border-color-grey">
+							<div class="container color-grey">
+								<h2>Blocks</h2>
+							</div>
+							<div class="padding-16">
+								<p>
+									A block is a simple element with fixed width<sup>1</sup> but variable height.
+									These elements have properties like float, position and margin, and they are the
+									most simple layout system.
+								</p>
+								<p>
+									For example: the next element is a block:
+								</p>
+								<div class="container border bs-2 border-color-dark-red padding-16 no-margin">
+									A block!
+								</div>
+								<p>
+									But the next element is not:
+								</p>
+								<div class="flexible center border bs-2 border-color-dark-red padding-16 no-margin">
+									<p>Centered</p>
+									<p>With</p>
+									<p>"center" class</p>
+								</div>
+								<p>
+									The above element is a flexible, you can see this viewing the page source code.
+								</p>
+								<p>
+									The main difference between a block and a flexible is how a block and a flexible
+									structures it's contents: A block displays it's elements, but a flexible
+									layouts its with a <em>flexible layout model</em> where each item in it
+									is rendered with a position, width and height relative to others childrens and
+									relative to the main flexible container.
+								</p>
+								<p>
+									This not mean "where you see a centered text, is a flexible", a block display
+									it's childrens using the CSS <em>block model</em> (see the CSS3 draft for more
+									info).
+								</p>
+								<p>
+									Generation uses the flexible block model rather than the block model, because this
+									flexible model is responsive, it displays better and all screens and have multiples
+									properties than the block model.
+								</p>
+							</div>
+						</section>
+						<section class="container no-padding border bs-2 border-color-grey" style="margin-top: 32px">
+							<div class="container color-grey">
+								<h2>Flexibles</h2>
+							</div>
+							<div class="padding-16">
+								<p>
+									A flexible element layouts it's childrens in any direction and
+									is flexible because it's childrens can realigning without
+									destroy the page structure. The next element example changes
+									it's layout for use the screen-space in the most efficient way:
+								</p>
+								<div class="flexible row border bs-2 border-color-dark-red padding-16 no-margin">
+									<p class="f1 o1">Hello</p>
+									<p class="f1 o2">World</p>
+									<p class="f1 o3">Of CSS</p>
+								</div>
+							</div>
+						</section>
+						<section class="container no-padding border bs-2 border-color-grey" style="margin-top: 32px">
+							<div class="container color-grey">
+								<h2>Boxes</h2>
+							</div>
+							<div class="padding-16">
+								<p>
+									A box is like a block, but without margin, padding and any effect. The boxes are
+									general purpose containers for any use (but if you need a container for text, elements,
+									widgets or others, see the <code>container</code> class).
+								</p>
+								<div class="box border bs-2 border-color-dark-red margin-16">
+									Hello from box
+								</div>
+								<div class="container border bs-2 border-color-dark-red margin-16">
+									Hello from container (block)
+								</div>
+								<div class="flexible border bs-2 border-color-dark-red margin-16">
+									Hello from flexible
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="container padding-16 color-black" style="margin-top: 16px;">
+			<div class="container text-small">
+				<div class="row">
+					<div class="col f1">
+						<a href="https://github.com/alinarezrangel/generation">In GitHub</a><br />
+						<a href="https://sourceforge.net/projects/generation-css-framework/">In SourceForge</a><br />
+						<a href="https://sourceforge.net/projects/generation-css-framework/blog">Generation Proyect Blog</a>
+					</div>
+					<div class="col f1">
+						<a href="../docs.html">See the documentation</a><br />
+						<a href="../download.html">Download Generation</a><br />
+						<a href="../index.html">Home Page</a><br />
+						<a href="../about.html">About Generation</a>
+					</div>
+					<div class="col f1">
+						<a href="../guide.html">Tutorials</a><br />
+						<a href="../others.html#logos">Get the Generation 1 logos</a><br />
+						<a href="../others.html#changelog">Generation ChangeLog</a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				Hosted by <a href="https://sourceforge.net/p/generation-css-framework/" rel="nofollow"><img alt="SourceForge" src="https://sourceforge.net/sflogo.php?type=10&group_id=2717309"></a>
+				(thanks!). Generation is distributed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>
+				and this documentation under the <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">cc-by-sa 4.0</a>
+			</div>
+		</footer>
+	</body>
+</html>
