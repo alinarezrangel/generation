@@ -31,8 +31,10 @@ All Generation classes can be applied to any element:
 </section>
 ```
 
-A list of generation classes can be found on the (https://github.com/alinarezrangel/generation/wiki/Class-List)[wiki]. For further reading, see the tutorial.html file.
+A list of generation classes can be found on the
+[wiki](https://github.com/alinarezrangel/generation/wiki/Class-List).
+For further reading, see the tutorial.html file.
 
 ## License
 
-Generation is under the (https://opensource.org/licenses/MIT)[MIT license].
+Generation is under the [MIT license](https://opensource.org/licenses/MIT).
