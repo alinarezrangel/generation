@@ -755,7 +755,13 @@ html, body {
 	order:         12 !important;
 }
 
-.sw-1 {
+.sw-0 {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow:    none !important;
+	box-shadow:         none !important;
+	z-index:            0;
+}
+.sw-c {
 	-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.7) !important;
 	-moz-box-shadow:    0px 0px 6px 0px rgba(0,0,0,0.7) !important;
 	box-shadow:         0px 0px 6px 0px rgba(0,0,0,0.7) !important;
