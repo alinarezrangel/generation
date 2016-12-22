@@ -95,30 +95,6 @@ html, body {
 	justify-content:         center;
 }
 
-.text-center {
-	text-align: center;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-right {
-	text-align: right;
-}
-
-.block-left {
-	float: left;
-}
-
-.block-right {
-	float: right;
-}
-
-.block-clear {
-	clear: both;
-}
-
 .left {
 	-ms-flex-direction:     row;
 	-moz-flex-direction:    row;
@@ -418,6 +394,30 @@ html, body {
 }
 
 /* utilities */
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.block-left {
+	float: left !important;
+}
+
+.block-right {
+	float: right !important;
+}
+
+.block-clear {
+	clear: both !important;
+}
 
 .no-margin {
 	margin: 0px !important;
@@ -755,7 +755,7 @@ html, body {
 	order:         12 !important;
 }
 
-.sw-0 {
+.no-shadow, .sw-0 {
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow:    none !important;
 	box-shadow:         none !important;
