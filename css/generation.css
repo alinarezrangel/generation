@@ -425,8 +425,11 @@ html, body {
 	list-style-type: disc;
 }
 
-.list.no-style > li:not(:first-child), .list.no-style > .list-element:not(:first-child) {
+.list.no-style > li, .list.no-style > .list-element {
 	list-style-type: none;
+}
+
+.list.no-style > li:not(:first-child), .list.no-style > .list-element:not(:first-child) {
 	border-top:      2px solid #ccc;
 }
 
