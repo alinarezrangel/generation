@@ -279,7 +279,7 @@ html, body {
 .input[type="email"], .input[type="number"], .input[type="search"],
 .input[type="url"], .input[type="tel"], .input[type="text"],
 .input[type="password"], .select, .textarea,
-.inputtext, textarea.input, select.input {
+.inputtext, .inputmultitext, textarea.input, select.input {
 	display:            inline-block;
 	background-color:   #fff;
 	color:              #000;
@@ -291,6 +291,10 @@ html, body {
 	-moz-box-sizing:    border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing:         border-box;
+}
+
+.inputmultitext, textarea.input {
+	border: 2px solid #ccc;
 }
 
 .fieldset {
