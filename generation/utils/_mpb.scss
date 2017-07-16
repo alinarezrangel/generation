@@ -1,0 +1,62 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Margin, padding and border utilities.
+*
+* The classes `padding` and `margin` (used to declare default padding and
+* margin) are obsolete and will be removed in Generation 2.1.X
+*/
+.no-padding {
+	padding: 0 !important;
+}
+.no-margin {
+	margin: 0 !important;
+}
+.no-border {
+	border: 0 !important;
+}
+
+.no-border-round {border-radius: 0 !important;}
+
+.border        {border:        $default-border;}
+.border-top    {border-top:    $default-border;}
+.border-bottom {border-bottom: $default-border;}
+.border-left   {border-left:   $default-border;}
+.border-right  {border-right:  $default-border;}
+
+.no-border-top    {border-top:    0 !important;}
+.no-border-bottom {border-bottom: 0 !important;}
+.no-border-left   {border-left:   0 !important;}
+.no-border-right  {border-right:  0 !important;}
+
+.no-border-vertical   {@extend .no-border-top;  @extend .no-border-bottom;}
+.no-border-horizontal {@extend .no-border-left; @extend .no-border-right;}
+
+.border-round       {border-radius: 5px  !important;}
+.border-ultra-round {border-radius: 25px !important;}
+.border-jumbo-round {border-radius: 50px !important;}
+
+@include mpb(1, 1px);
+@include mpb(2, 2px);
+@include mpb(4, 4px);
+@include mpb(6, 6px);
+@include mpb(8, 8px);
+@include mpb(16, 16px);
+@include mpb(32, 32px);
+@include mpb(64, 64px);

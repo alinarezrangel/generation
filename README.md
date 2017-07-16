@@ -5,7 +5,7 @@
 
 Generation is a CSS3 based framework for creating web pages, HTML5 applications and more.
 
-This is Generation 1.
+This is Generation 2.
 
 ## Instalation
 
@@ -16,7 +16,7 @@ Copy these link and script tags to your project and use
 <script src="generation/js/generation.js"></script>
 ```
 
-The ECMAScript core is optional.
+The JavaScript/ECMAScript core is optional.
 
 ## Usage
 
@@ -33,7 +33,22 @@ All Generation classes can be applied to any element:
 
 A list of generation classes can be found on the
 [wiki](https://github.com/alinarezrangel/generation/wiki/Class-List).
-For further reading, see the tutorial.html file.
+For further reading, see the [tutorial](tutorial.html) file.
+
+## Building
+
+Generation uses Gulp for building, by default, it will generate compressed
+output, but you can customize the building by editing the
+[gulpfile](gulpfile.js):
+
+```sh
+# To build generation, use:
+gulp
+```
+
+All compiled files will be on the `css/` folder (for compatibility reasons,
+all HTML files that uses Generation should use the `css/` files instead of
+the SASS ones).
 
 ## License
 

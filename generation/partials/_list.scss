@@ -1,0 +1,77 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Styles HTML lists.
+*
+* This class have implementations for all `ol`, `ul` and `dl` HTML list types.
+*
+* If you mix it with the `.no-style`, the list will be styled without using
+* the browser's markers. The `.no-style` class is only valid when used with
+* `ul` lists (unordered lists).
+*/
+.list {
+	@extend .box;
+}
+
+ul.list:not(.no-style) {
+	margin-left: $margin-between-st-lists-left;
+
+	& > li  {
+		margin-top: $margin-between-lists;
+		list-style-type: disc;
+		padding: $padding-list;
+	}
+}
+
+ol.list {
+	margin-left: $margin-between-st-lists-left;
+
+	& > li {
+		margin-top: $margin-between-lists;
+		padding: $padding-list;
+	}
+}
+
+ul.list.no-style {
+	& > li {
+		list-style-type: none;
+		padding: $padding-list;
+	}
+
+	& > li:not(:first-child) {
+		border-top: $list-border-top;
+	}
+}
+
+dl.list:not(.no-style) {
+	& > dt {
+		margin-left: 0;
+		padding-left: 0;
+		margin-bottom: $margin-between-lists-bottom;
+	}
+
+	& > dd {
+		margin-left: $margin-between-lists-left;
+		padding-left: 0;
+	}
+
+	& > dd:not(:last-child) {
+		margin-bottom: $margin-between-lists;
+	}
+}

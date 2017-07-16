@@ -4,8 +4,8 @@
 		<meta charset="UTF-8"/>
 		<title>Generation - The CSS Based framework</title>
 		<link href="css/generation.css" rel="stylesheet"/>
-		<link href="css/pallete_basics.css" rel="stylesheet"/>
-		<link href="css/pallete_natural.css" rel="stylesheet"/>
+		<link href="css/basics/main.css" rel="stylesheet"/>
+		<link href="css/natural/main.css" rel="stylesheet"/>
 		<script src="js/generation.js"></script>
 	</head>
 	<body>
@@ -26,11 +26,9 @@
    limitations under the License.
 ***************************************
 -->
-		<header class="container color-black">
-			<div class="flexible center">
-				<h1>Generation 1</h1>
-				<h2>The CSS3 based framework</h2>
-			</div>
+		<header class="container padding-32 text-center color-black">
+			<h1>Generation 1</h1>
+			<h2>The CSS3 based framework</h2>
 		</header>
 		<div class="modal" id="modal1">
 			<div class="modal-content">
@@ -65,36 +63,36 @@
 				</header>
 				<h4>Colors (normal)</h4>
 				<div class="button-group">
-					<button type="button" class="button color-black">button</button>
-					<button type="button" class="button color-white">button</button>
-					<button type="button" class="button color-green">button</button>
-					<button type="button" class="button color-red">button</button>
-					<button type="button" class="button color-yellow">button</button>
-					<button type="button" class="button color-blue">button</button>
-					<button type="button" class="button color-aqua">button</button>
-					<button type="button" class="button color-grey">button</button>
+					<button type="button" class="button color-black">black</button>
+					<button type="button" class="button color-white">white</button>
+					<button type="button" class="button color-green">green</button>
+					<button type="button" class="button color-red">red</button>
+					<button type="button" class="button color-yellow">yellow</button>
+					<button type="button" class="button color-blue">blue</button>
+					<button type="button" class="button color-aqua">aqua</button>
+					<button type="button" class="button color-grey">grey</button>
 				</div>
 				<h4>Colors (light)</h4>
 				<div class="button-group">
-					<button type="button" class="button color-black">button</button>
-					<button type="button" class="button color-white">button</button>
-					<button type="button" class="button color-light-green">button</button>
-					<button type="button" class="button color-light-red">button</button>
-					<button type="button" class="button color-light-yellow">button</button>
-					<button type="button" class="button color-light-blue">button</button>
-					<button type="button" class="button color-light-aqua">button</button>
-					<button type="button" class="button color-light-grey">button</button>
+					<button type="button" class="button color-black">black</button>
+					<button type="button" class="button color-white">white</button>
+					<button type="button" class="button color-light-green">light-green</button>
+					<button type="button" class="button color-light-red">light-red</button>
+					<button type="button" class="button color-light-yellow">light-yellow</button>
+					<button type="button" class="button color-light-blue">light-blue</button>
+					<button type="button" class="button color-light-aqua">light-aqua</button>
+					<button type="button" class="button color-light-grey">light-grey</button>
 				</div>
 				<h4>Colors (dark)</h4>
 				<div class="button-group">
-					<button type="button" class="button color-black">button</button>
-					<button type="button" class="button color-white">button</button>
-					<button type="button" class="button color-dark-green">button</button>
-					<button type="button" class="button color-dark-red">button</button>
-					<button type="button" class="button color-dark-yellow">button</button>
-					<button type="button" class="button color-dark-blue">button</button>
-					<button type="button" class="button color-dark-aqua">button</button>
-					<button type="button" class="button color-dark-grey">button</button>
+					<button type="button" class="button color-black">black</button>
+					<button type="button" class="button color-white">white</button>
+					<button type="button" class="button color-dark-green">dark-green</button>
+					<button type="button" class="button color-dark-red">dark-red</button>
+					<button type="button" class="button color-dark-yellow">dark-yellow</button>
+					<button type="button" class="button color-dark-blue">dark-blue</button>
+					<button type="button" class="button color-dark-aqua">dark-aqua</button>
+					<button type="button" class="button color-dark-grey">dark-grey</button>
 				</div>
 				<h4>Colors (color pallete basics, by default)</h4>
 				<div class="button-group wrap">
@@ -164,10 +162,21 @@
 				<div class="container border margin">
 					Container
 				</div>
-				<div class="fcontainer border margin">
+				<div class="fcontainer other border margin">
 					Flexible Container
 				</div>
-				<div class="flexible center border margin">
+				<div class="flexbox left border margin">
+					<div class="box">
+						Flexible
+					</div>
+					<div class="box">
+						With
+					</div>
+					<div class="box">
+						Left
+					</div>
+				</div>
+				<div class="flexbox center border margin">
 					<div class="box">
 						Flexible
 					</div>
@@ -178,7 +187,7 @@
 						Center
 					</div>
 				</div>
-				<div class="flexible right border margin">
+				<div class="flexbox right border margin">
 					<div class="box">
 						Flexible
 					</div>
@@ -187,17 +196,6 @@
 					</div>
 					<div class="box">
 						Right
-					</div>
-				</div>
-				<div class="flexible left border margin">
-					<div class="box">
-						Flexible
-					</div>
-					<div class="box">
-						With
-					</div>
-					<div class="box">
-						Left
 					</div>
 				</div>
 				<div class="section border margin">
@@ -220,7 +218,7 @@
 					<a href="#">o</a>
 					<a href="#">n</a>
 				</nav>
-				<nav class="top-navigation color-dark-green margin">
+				<nav class="navigation top color-dark-green margin">
 					<a href="#">N</a>
 					<a href="#">a</a>
 					<a href="#">v</a>
@@ -232,7 +230,7 @@
 					<a href="#">o</a>
 					<a href="#">n</a>
 				</nav>
-				<nav class="side-navigation color-dark-yellow margin">
+				<nav class="navigation side color-dark-yellow margin">
 					<a href="#">N</a>
 					<a href="#">a</a>
 					<a href="#">v</a>
@@ -257,6 +255,10 @@
 					<label class="label">
 						Your password:
 						<input class="input" type="password"/>
+					</label>
+					<label class="label">
+						Your comment:
+						<textarea class="input">This is a textarea</textarea>
 					</label>
 					<fieldset class="fieldset">
 						<legend>Your car color</legend>
@@ -354,6 +356,43 @@
 			</section>
 			<section class="section border">
 				<header class="container color-grey">
+					<h3>Tables</h3>
+				</header>
+				<p>
+					Table:
+				</p>
+				<table class="table">
+					<caption>Hola</caption>
+					<thead>
+						<tr>
+							<td>Head 1</td>
+							<td>Head 2</td>
+							<td>Head 3</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>A</td>
+							<td>B</td>
+							<td>C</td>
+						</tr>
+						<tr>
+							<td>D</td>
+							<td>E</td>
+							<td>F</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Foot 1</td>
+							<td>Foot 2</td>
+							<td>Foot 3</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			<section class="section border">
+				<header class="container color-grey">
 					<h3>Responsible 12 columns fluid grid</h3>
 				</header>
 				<p>
@@ -426,56 +465,60 @@
 				<p>
 					Generation 1 includes a set of font sizes:
 				</p>
-				<div class="container text-tiny">
-					text-tiny
+				<div class="container font-size-ultra-small">
+					font-size-ultra-small
 				</div>
-				<div class="container text-small">
-					text-small
+				<div class="container font-size-small">
+					font-size-small
 				</div>
-				<div class="container text-normal">
-					text-normal
+				<div class="container font-size-regular">
+					font-size-regular
 				</div>
-				<div class="container text-big">
-					text-big
+				<div class="container font-size-big">
+					font-size-big
 				</div>
-				<div class="container text-ultra-big">
-					text-ultra-big
+				<div class="container font-size-ultra-big">
+					font-size-ultra-big
 				</div>
-				<div class="container text-large">
-					text-large
+				<div class="container font-size-large">
+					font-size-large
 				</div>
-				<div class="container text-xlarge">
-					text-xlarge
+				<div class="container font-size-ultra-large">
+					font-size-ultra-large
 				</div>
-				<div class="container text-jumbo">
-					text-jumbo
+				<div class="container font-size-jumbo">
+					font-size-jumbo
 				</div>
-				<div class="container text-jumbo-2">
-					text-jumbo-2
+				<div class="container font-size-ultra-jumbo">
+					font-size-ultra-jumbo
 				</div>
-				<div class="container text-jumbo-3">
-					text-jumbo-3
+				<div class="container font-size-extreme">
+					font-size-extreme
 				</div>
-				<div class="container text-jumbo-4">
-					text-jumbo-4
+				<div class="container font-size-ultra-extreme">
+					font-size-ultra-extreme
 				</div>
-				<div class="container text-jumbo-5">
-					text-jumbo-5
+				<div class="container font-size-mega">
+					font-size-mega
 				</div>
-				<div class="container font-normal">
-					font-normal
+
+				<div class="container font-style-regular">
+					font-style-regular
 				</div>
-				<div class="container font-monospace">
-					font-monospace
+				<div class="container font-style-monospace">
+					font-style-monospace
 				</div>
-				<div class="container font-italic">
-					font-italic
+				<div class="container font-style-italic">
+					font-style-italic
 				</div>
-				<div class="container font-bold">
-					font-bold
+				<div class="container font-style-bold">
+					font-style-bold
 				</div>
-				<div class="container font-serif">
-					font-serif
+				<div class="container font-style-light-bold">
+					font-style-light-bold
+				</div>
+				<div class="container font-style-serif">
+					font-style-serif
 				</div>
 			</section>
 			<section class="section border">
@@ -492,6 +535,43 @@
 				<div class="button color-green text-color-light-grey" id="btn2">
 					Restore
 				</div>
+			</section>
+			<section class="section border">
+				<header class="container color-grey">
+					<h3>Lists</h3>
+				</header>
+				<ul class="list">
+					<li>This</li>
+					<li>is</li>
+					<li>a</li>
+					<li>UL list</li>
+					<li>with classes</li>
+					<li><code>.list</code></li>
+				</ul>
+				<ul class="list no-style">
+					<li>This</li>
+					<li>is</li>
+					<li>a</li>
+					<li>UL list</li>
+					<li>with classes</li>
+					<li><code>.list.no-style</code></li>
+				</ul>
+				<ol class="list">
+					<li>This</li>
+					<li>is</li>
+					<li>a</li>
+					<li>OL list</li>
+					<li>with classes</li>
+					<li><code>.list</code></li>
+				</ol>
+				<dl class="list">
+					<dt>What is this?</dt>
+					<dd>A DL list</dd>
+					<dt>Classes?</dt>
+					<dd><code>.list</code></dd>
+					<dt>Notes:</dt>
+					<dd>None</dd>
+				</dl>
 			</section>
 			<section class="section border">
 				<header class="container color-grey">
@@ -521,7 +601,7 @@
 				</ul>
 			</section>
 
-			<button class="button color-grey">hola</button>
+			<button class="button color-grey padding-64 margin-16">hola</button>
 		</main>
 		<footer class="fcontainer center color-black">
 			<p>

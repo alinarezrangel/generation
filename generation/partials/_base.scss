@@ -1,0 +1,239 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Screen breakpoints.
+*/
+$brk-small: 345px; /// Small screens (ultra-small devices)
+$brk-medium: 560px; /// Medium screens (small-tablets or a mobile/phone device)
+$brk-large: 780px; /// Large screens (tablets and laptops)
+$brk-big: 870px; /// (Really) Big screens (laptops and small-PCs)
+$brk-xlarge: 1024px; /// (Extremely) Large screens (big-laptops and PCs)
+
+/**
+* Reference to the breakpoint for mobile devices.
+*
+* `medium` means `$brk-medium` which defines any screen with less than
+* `$brk-medium` pixels width as a mobile device.
+*/
+$sbrk-mobile: medium;
+
+/**
+* Font weights for different font values.
+*
+* This is used by `.font-style-bold` and others.
+*/
+$font-light: 100;
+$font-regular: 400;
+$font-bold: 600;
+
+/**
+* The global (initial) font size in pixels.
+*/
+$font-size-global: 16px;
+
+/**
+* The font weights for default text and headings.
+*/
+$font-weight-default: $font-regular;
+$font-weight-heading-l1: $font-bold;
+$font-weight-heading-l2: $font-bold;
+$font-weight-heading-l3: $font-bold;
+$font-weight-heading-l4: $font-bold;
+$font-weight-heading-l5: $font-bold;
+$font-weight-heading-l6: $font-bold;
+
+/**
+* Font sizes for the `.font-size-*` and others.
+*/
+$font-size-usmall:   0.7em;
+$font-size-small:    0.9em;
+$font-size-regular:  1em;
+$font-size-big:      1.2em;
+$font-size-ubig:     1.5em;
+$font-size-large:    1.9em;
+$font-size-ularge:   2em;
+$font-size-jumbo:    2.7em;
+$font-size-ujumbo:   3.2em;
+$font-size-extreme:  3.7em;
+$font-size-uextreme: 4.3em;
+$font-size-mega:     5em;
+
+/**
+* Font sizes for different screen sizes.
+*/
+$font-size-sm-usmall:   0.9em;
+$font-size-sm-small:    0.9em;
+$font-size-sm-regular:  1em;
+$font-size-sm-big:      1.1em;
+$font-size-sm-ubig:     1.2em;
+$font-size-sm-large:    1.4em;
+$font-size-sm-ularge:   1.8em;
+$font-size-sm-jumbo:    2em;
+$font-size-sm-ujumbo:   2.2em;
+$font-size-sm-extreme:  2.4em;
+$font-size-sm-uextreme: 2.8em;
+$font-size-sm-mega:     3em;
+
+$font-size-md-usmall:   0.9em;
+$font-size-md-small:    0.9em;
+$font-size-md-regular:  1em;
+$font-size-md-big:      1.2em;
+$font-size-md-ubig:     1.5em;
+$font-size-md-large:    1.9em;
+$font-size-md-ularge:   2.2em;
+$font-size-md-jumbo:    2.5em;
+$font-size-md-ujumbo:   2.9em;
+$font-size-md-extreme:  3em;
+$font-size-md-uextreme: 3.2em;
+$font-size-md-mega:     3.5em;
+
+/**
+* Font sizes for the headings (the text is always `regular`).
+*/
+$font-size-heading-l1: $font-size-extreme;
+$font-size-heading-l2: $font-size-ujumbo;
+$font-size-heading-l3: $font-size-jumbo;
+$font-size-heading-l4: $font-size-ularge;
+$font-size-heading-l5: $font-size-large;
+$font-size-heading-l6: $font-size-ubig;
+
+/**
+* Padding for some elements.
+*/
+$padding-default: 4px; /// Default padding for boxes and children of them.
+$padding-container: 8px; /// Padding for the `.container` class.
+$padding-button: 8px 16px; /// Padding for any `.button`.
+$padding-navigation: 8px 16px; /// Padding for links on a `.navigation`.
+$padding-input: 8px 16px; /// Padding for `.input` fields
+$padding-fieldset: 0.12em 0.67em 0.67em 0.67em; // Padding for `.fieldset`s.
+$padding-list: 2px; /// Padding for list's items `.list`.
+$padding-table: 0; /// Padding for `.table`s.
+
+/**
+* Margin for some elements.
+*/
+$margin-default: 4px; /// Default margin for the boxes and children of them.
+$margin-container: 8px; /// Margin for the `.container` class.
+$margin-button: auto; /// Margin of a `.button`.
+$margin-button-group: 4px; /// Margin of a `.button-group` group.
+$margin-fieldset: 0.75em 0.32em; /// Margin of a `.fieldset`.
+$margin-between-lists: 6px; /// Margin between list's items (`.list`).
+$margin-between-lists-left: 32px; /// Margin to the left in DL lists (`.list`).
+$margin-between-lists-bottom: 4px; /// Margin to the bottom in DL lists.
+$margin-between-st-lists-left: 16px; /// Margin to the left by list's items.
+$margin-table: 8px; /// Margin in tables (`.table`).
+
+/**
+* Default colors for elements.
+*
+* All of these colors can be overrided at runtime using color palletes.
+*
+* Note that the `*-navlink` styles are only applied when the navigation's
+* links are hovered or activated.
+*/
+$color-default-bkg-button: black; /// Background color of buttons.
+$color-default-fnt-button: white; /// Text color of buttons.
+$color-default-bkg-navlink: #CCC; /// Background color of navigation's links.
+$color-default-brd-navlink: #CCC; /// Border color of the navigation's links.
+$color-default-fnt-navlink: black; /// Text color of the navigation's links.
+$color-default-bkg-input: #FFF; /// Background color of the form's inputs.
+$color-default-fnt-input: #000; /// Text color of the form's inputs.
+
+/**
+* Border colors for elements and utility classes.
+*/
+$default-border: 1px solid #CCC; /// Border applied by `.border`.
+$topnav-border-bottom: 5px; /// Border size of the top-navigation's links.
+$input-border-bottom: 2px solid #CCC; /// Border of the form's inputs.
+$list-border-top: 2px solid #CCC; /// Border of UL-list's items.
+$table-border: 1px solid #CCC; /// Border applied to tables.
+
+/**
+* Font families for the document.
+*/
+$font-family-default: Arial, Helvetica, sans-serif; /// Global font family.
+$font-family-monospace: monospace; /// Font family for monospaced fonts.
+$font-family-serif: 'Times New Roman', Times, serif; // Font family for serif.
+$font-family-headings: sans-serif; /// Font family for headings.
+
+/**
+* Global text-color and background-color.
+*/
+$font-color-default: black; /// Global text color.
+$background-color-default: white; /// Global background color.
+
+/**
+* Shadows.
+*
+* Used by all shadowed elements like `.card` and utility classes like `.sw-*`.
+*/
+$shadow-1:  0px 0px 6px  0px rgba(0, 0, 0, 0.7);
+$shadow-2:  0px 0px 9px  0px rgba(0, 0, 0, 0.7);
+$shadow-3:  0px 0px 12px 1px rgba(0, 0, 0, 0.7);
+$shadow-4:  0px 0px 18px 2px rgba(0, 0, 0, 0.7);
+$shadow-5:  0px 0px 21px 2px rgba(0, 0, 0, 0.7);
+$shadow-6:  0px 0px 24px 3px rgba(0, 0, 0, 0.7);
+$shadow-7:  0px 0px 27px 3px rgba(0, 0, 0, 0.7);
+$shadow-8:  0px 0px 30px 4px rgba(0, 0, 0, 0.7);
+$shadow-9:  0px 0px 33px 4px rgba(0, 0, 0, 0.7);
+$shadow-10: 0px 0px 36px 5px rgba(0, 0, 0, 0.7);
+$shadow-11: 0px 0px 39px 5px rgba(0, 0, 0, 0.7);
+$shadow-12: 0px 0px 42px 6px rgba(0, 0, 0, 0.7);
+
+/**
+* Utility list of all shadows.
+*
+* Is defined only for implementation purposes.
+*/
+$shadows: (
+	$shadow-1,
+	$shadow-2,
+	$shadow-3,
+	$shadow-4,
+	$shadow-5,
+	$shadow-6,
+	$shadow-7,
+	$shadow-8,
+	$shadow-9,
+	$shadow-10,
+	$shadow-11,
+	$shadow-12);
+
+/**
+* Shadows for elements.
+*
+* The `$shadow-button` represents the default shadow for an elevated button
+* (`.button`) and `$shadow-button-raised` for a raised button.
+*/
+$shadow-button: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$shadow-button-raised: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+
+/**
+* Animation parameters for the "act activation" animation.
+*
+* The activation animation is used when a monostable element is raised to an
+* unstable state. Like a flat button when is hovered, the final state is active
+* by only a small fraction of time until the element is returned to it's
+* original state.
+*/
+$anim-act-function: ease;
+$anim-act-time: 300ms;
+$anim-act-delay: 10ms;
+
+@import "../modules/all";

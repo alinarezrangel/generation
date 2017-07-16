@@ -1,0 +1,75 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Styles inputs.
+*
+* This class have an specialization for almost all input types.
+*
+* The classes `.inputtext` and `.inputmultitext` are obsolete and
+* should be replaced by `.input-text`, `.input-mtext` only when the `.input`
+* class alone cannot style the element correctly.
+*
+* The `.select` class is an alias for this class. The `.select` class is
+* not recommended and will be obsoleted in future versions of Generation.
+*/
+.input {
+	@extend .abstract-box;
+
+	display: inline-block;
+
+	padding: $padding-input;
+	margin: $margin-default;
+
+	border: 0;
+	border-bottom: $input-border-bottom;
+
+	background-color: $color-default-bkg-input;
+	color: $color-default-fnt-input;
+
+	box-sizing: border-box;
+}
+
+.input-text {
+	@extend .input;
+
+	width: 100%;
+}
+
+.input-mtext {
+	@extend .input-text;
+
+	border: $input-border-bottom;
+}
+
+.textarea {
+	@extend .input-mtext;
+}
+
+.select, select.input {
+	@extend .input-text;
+}
+
+.input[type="text"], .input[type="number"], .input[type="search"],
+.input[type="url"], .input[type="email"], .input[type="password"] {
+	@extend .input-text;
+}
+
+textarea.input {
+	@extend .input-mtext;
+}

@@ -1,0 +1,56 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Shadow utility classes.
+*
+* The old `.sw-c` is obsolete and will be deleted in Generation 3, use
+* `.sw-1` instead.
+*
+* The new `.sd-*` are like `.sw-*` but not changes the z-index. The new
+* `.zi-*` sets **only** the z-index.
+*/
+
+.no-shadow, .sd-0 {
+	box-shadow: none !important;
+}
+
+.zi-0 {
+	z-index: 0 !important;
+}
+
+.sw-0 {
+	@extend .sd-0;
+	@extend .zi-0;
+}
+
+@for $i from 1 through 12 {
+	.sd-#{$i} {
+		box-shadow: nth($shadows, $i) !important;
+	}
+
+	.zi-#{$i} {
+		z-index: $i !important;
+	}
+
+	.sw-#{$i} {
+		@extend .sd-#{$i};
+
+		z-index: $i;
+	}
+}

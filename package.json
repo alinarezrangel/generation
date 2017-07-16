@@ -1,0 +1,36 @@
+{
+  "name": "generation-css-framework",
+  "version": "2.0.0",
+  "description": "A CSS3 Framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinarezrangel/generation.git"
+  },
+  "keywords": [
+    "css3",
+    "css",
+    "web",
+    "framework"
+  ],
+  "author": "Alejandro Linarez Rangel",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alinarezrangel/generation/issues"
+  },
+  "homepage": "https://github.com/alinarezrangel/generation#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0"
+  },
+  "dependencies": {
+    "rimraf": "^2.6.1"
+  }
+}

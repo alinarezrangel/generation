@@ -1,0 +1,56 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Applies a body on the specified size.
+*
+* Valid sizes are:
+*
+* - `small`: break on `$brk-small`.
+* - `medium`: break on `$brk-medium`.
+* - `large`: break on `$brk-large`.
+* - `big`: break on `$brk-big`.
+* - `xlarge`: break on `$brk-xlarge`.
+*/
+@mixin apply-on-size($size) {
+	@if $size == small {
+		@media (min-width: $brk-small) {
+			@content;
+		}
+	}
+	@if $size == medium {
+		@media (min-width: $brk-medium) {
+			@content;
+		}
+	}
+	@if $size == large {
+		@media (min-width: $brk-large) {
+			@content;
+		}
+	}
+	@if $size == big {
+		@media (min-width: $brk-big) {
+			@content;
+		}
+	}
+	@if $size == xlarge {
+		@media (min-width: $brk-xlarge) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Flexible align and wrap utility classes.
+*
+* The `.wrap-*` classes (except for `.wrap-reverse`) are obsolete and will be
+* deleted on Generation 3, use `.content-*` instead.
+*
+* The `.align-*` classes specified the alignment of the flex items, if you
+* just want to align specific items, try with `.self-*`. `.content-*` aligns
+* the content block of the container and `.justify-*` aligns them on the
+* horizontal axis.
+*/
+
+.wrap         {flex-wrap: wrap         !important;}
+.no-wrap      {flex-wrap: nowrap       !important;}
+.wrap-reverse {flex-wrap: wrap-reverse !important;}
+
+.align-start    {align-items: flex-start !important;}
+.align-end      {align-items: flex-end   !important;}
+.align-stretch  {align-items: stretch    !important;}
+.align-baseline {align-items: baseline   !important;}
+
+.self-start    {align-self: flex-start !important;}
+.self-end      {align-self: flex-end   !important;}
+.self-stretch  {align-self: stretch    !important;}
+.self-baseline {align-self: baseline   !important;}
+
+.wrap-start,         .content-start         {align-content: flex-start    !important;}
+.wrap-end,           .content-end           {align-content: flex-end      !important;}
+.wrap-stretch,       .content-stretch       {align-content: stretch       !important;}
+.wrap-space-between, .content-space-between {align-content: space-between !important;}
+.wrap-space-around,  .content-space-around  {align-content: space-around  !important;}
+
+.justify-start         {justify-content: flex-start    !important;}
+.justify-end           {justify-content: flex-end      !important;}
+.justify-stretch       {justify-content: stretch       !important;}
+.justify-space-between {justify-content: space-between !important;}
+.justify-space-around  {justify-content: space-around  !important;}
