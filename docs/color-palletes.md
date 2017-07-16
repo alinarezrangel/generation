@@ -1,3 +1,0 @@
-# Generation Color Palletes #
-
-**TODO**

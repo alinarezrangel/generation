@@ -1,3 +1,0 @@
-# Creating Color Palletes #
-
-**TODO**
