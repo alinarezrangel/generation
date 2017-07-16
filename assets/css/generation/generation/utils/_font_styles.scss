@@ -1,0 +1,52 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Font styles utility classes `.font-style-*` and `.font-*`.
+*
+* All old-style `.font-*` classes are obsolete and should be replaced by
+* `.font-style-*`.
+*/
+
+.font-normal, .font-style-regular {
+	font-style: normal !important;
+	font-weight: $font-regular !important;
+	font-family: $font-family-default !important;
+}
+
+.font-bold, .font-style-bold {
+	font-style: bold !important;
+	font-weight: $font-bold !important;
+}
+
+.font-style-light {
+	font-style: bold !important;
+	font-weight: $font-light !important;
+}
+
+.font-monospace, .font-style-monospace {
+	font-family: $font-family-monospace !important;
+}
+
+.font-italic, .font-style-italic {
+	font-style: italic !important;
+}
+
+.font-serif, .font-style-serif {
+	font-family: $font-family-serif !important;
+}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="section no-padding">
+	<header class="container no-margin">
+		<h2>{{ page.title }}</h2>
+	</header>
+	<section class="meta metadata box">
+		{{ page.date | dato_to_string }}
+	</section>
+	<section class="post container">
+		{{ content }}
+	</section>
+</article>
+

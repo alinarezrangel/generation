@@ -1,0 +1,53 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+@import "../pallete";
+
+@include pallete-new(
+	$name: "Basics",
+	$prefix: none,
+	$description: "A colorful, basic pallete",
+	$authors: "Alejandro Linarez Rangel @alinarezrangel",
+	$url: "https://github.com/alinarezrangel/generation",
+	$color-source: "https://www.w3schools.com/colors/colors_palettes.asp",
+	$version: "1.1.0",
+	$date: "2017-07-14"
+);
+
+@include pallete-tag("section", "Base Colors");
+@include pallete-color("water", #92a8d1, #000);
+@include pallete-color("ocean", #034f84, #fff);
+@include pallete-color("greenapple", #b1cbbb, #000);
+@include pallete-color("sky", #deeaee, #000);
+@include pallete-color("flowered", #c94c4c, #000);
+@include pallete-color("purple", #50394c, #fff);
+@include pallete-color("cyan", #80ced6, #000);
+@include pallete-color("magenta", #4040a1, #fff);
+@include pallete-color("sand", #f4e1d2, #000);
+@include pallete-color("tree", #77a8a8, #000);
+@include pallete-color("rusticred", #563f46, #000);
+@include pallete-color("earth", #625750, #000);
+
+@include pallete-tag("section", "Evercolors");
+@include pallete-color("evergreen", #618685, #000);
+@include pallete-color("everred", #bc5a45, #000);
+@include pallete-color("everblack", #3b3a30, #fff);
+
+@include pallete-tag("section", "Simplecolors");
+@include pallete-color("simpleblue", #36486b, #fff);
+@include pallete-color("simplegreen", #618685, #000);

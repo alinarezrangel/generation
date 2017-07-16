@@ -1,0 +1,302 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Functions and mixins used to define color palletes.
+*/
+
+/**
+* Determines how much light or dark should be added when making lighten or
+* darken versions of the colors.
+*/
+$pallete-light-constant: 15% !default;
+
+/**
+* Creates a new color pallete.
+*
+* Use this mixin before a call to other `pallete-*` mixins. The scope of this
+* new pallete is defined until another call to this function is madded.
+*
+* @param {QuotedString} $name - The name of the color pallete (required).
+* @param {QuotedString|none} $prefix - The prefix to use or `none` (required).
+* @param {QuotedString} $description - The description of the pallete.
+* @param {List<QuotedString>} $authors - The authors.
+* @param {URLString} $url - The URL to the pallete page if any, or a path to
+* the pallete's README or LICENSE files.
+* @param {URLString} $color-source - The URL to the page from which the colors
+* were extracted.
+* @param {SemverString} $version - The semver version of the pallete.
+* @param {ISOStringDate} $date - Date of creation or last modification.
+*/
+@mixin pallete-new(
+	$name,
+	$prefix,
+	$description: "",
+	$authors: "",
+	$url: "",
+	$color-source: "own",
+	$version: "1.0.0",
+	$date: "2000-01-01"
+) {
+	$pallete-name: $name !global;
+	$pallete-prefix: $prefix !global;
+	$pallete-description: $description !global;
+	$pallete-authors: $authors !global;
+	$pallete-url: $url !global;
+	$pallete-color-source: $color-source !global;
+	$pallete-version: $version !global;
+	$pallete-date: $date !global;
+	$pallete-tags: none !global;
+	$pallete-nested: false !global;
+}
+
+/**
+* Determines if the current scope is a nested call.
+*
+* @return {Boolean} `true` if is nested, `false` otherwise.
+*/
+@function pallete-is-nested() {
+	@return $pallete-nested;
+}
+
+/**
+* Gets the global data tags.
+*
+* @return {DataTags} The current global data tags.
+*/
+@function pallete-get-tags() {
+	@return $pallete-tags;
+}
+
+/**
+* Sets the global data tags.
+*
+* @param {DataTags} $tags - The new data tags.
+*/
+@mixin pallete-set-tags($tags) {
+	$pallete-tags: $tags !global;
+}
+
+/**
+* Sets the global data tags if the current call is not a nested call.
+*
+* @param {DataTags} $tags - The new data tags.
+*/
+@mixin pallete-set-tags-if-not-nested($tags) {
+	@if(not pallete-is-nested()) {
+		@include pallete-set-tags($tags);
+	}
+}
+
+/**
+* Sets the current global nest status.
+*
+* @param {Boolean} $nested - `true` if this is a nested call, `false` otherwise.
+*/
+@mixin pallete-set-nested($nested) {
+	$pallete-nested: $nested !global;
+}
+
+/**
+* Raises current tag warnings if this is not a nested call.
+*
+* Also, the content passed to this mixin is used only for each warning
+* encountered.
+*
+* See the `pallete-tag` mixin.
+*/
+@mixin pallete-raise-tags-if-not-nested() {
+	@if((not pallete-is-nested()) and (pallete-get-tags() != none)) {
+		/*
+		* Check the flags for:
+		*
+		* - Deprecation warnings
+		* - Renaming warnings
+		* - *`TODO`* warnings
+		*/
+
+		$section-name: none;
+
+		@each $tag-name, $tag-value in pallete-get-tags() {
+			@if($tag-name == deprecated) {
+				@warn "Generation Palletes: Deprecation Warning: #{$tag-value}";
+
+				@content;
+			}
+			@else if($tag-name == renamed) {
+				@warn "Generation Palletes: Renaming Warning: #{$tag-value}";
+
+				@content;
+			}
+			@else if($tag-name == todo) {
+				@warn "Generation Palletes: TODO Warning: #{$tag-value}";
+
+				@content;
+			}
+			@else if($tag-name == section) {
+				$section-name: $tag-value;
+			}
+		}
+
+		@if($section-name != none) {
+			@include pallete-set-tags((section: $section-name));
+		}
+		@else {
+			@include pallete-set-tags(none);
+		}
+	}
+}
+
+/**
+* Tags the next color declaration.
+*
+* The next declaration will have the specified tag, this will generate a special
+* class which can be used to see errors on each pallete's test page (see the
+* `generation-pallete-test` tool).
+*
+* The valid tag types are:
+*
+* - `deprecated`: The next color/s are deprecated and should not be used.
+* - `renamed`: The next color/s were renamed, the old-form is deprecated and
+* should not be used. You should include clearly the new color name.
+* - `todo`: The next color/s are not defined or have dummy values.
+* - `section`: All colors until a new section declaration are members of this
+* section.
+*
+* For the `deprecated`, `renamed` and `todo` tag-types, the tag value should be
+* the warning message to show when compiling the pallete. For the `section`
+* tag-type, it should be the name of the section.
+*
+* You can clear the data tags by using the tag-type `section` and the tag value
+* `"none"`.
+*
+* @param {QuotedString} $tag-type - The tag type.
+* @param {QuotedString} $tag-value - The tag value.
+*/
+@mixin pallete-tag($tag-type, $tag-value) {
+	@if(unquote($tag-type) == section) {
+		@if(unquote($tag-value) == none) {
+			@include pallete-set-tags(none);
+
+			@debug "Generation Palletes: At section marked 'none'";
+		}
+		@else {
+			@include pallete-set-tags(
+				(section: $tag-value)
+			);
+
+			@debug "Generation Palletes: At section '#{$tag-value}'";
+		}
+	}
+	@else {
+		@if(pallete-get-tags() == none) {
+			@include pallete-set-tags((unquote($tag-type): $tag-value));
+		}
+		@else {
+			@include pallete-set-tags(
+				map-merge(pallete-get-tags(), (unquote($tag-type): $tag-value))
+			);
+		}
+	}
+}
+
+/**
+* Defines a new color for the current pallete.
+*
+* @param {QuotedString} $name - The name of the color.
+* @param {Color} $value - The value of the color.
+* @param {Color} $accent - A color that contrast with the new color.
+*/
+@mixin pallete-color-base($name, $value, $accent) {
+	$name: unquote($name);
+	$sname: unquote("#{$pallete-prefix}-#{$name}");
+
+	@if($pallete-prefix == none) {
+		$sname: $name;
+	}
+
+	.color-#{$sname} {
+		background-color: $value !important;
+		color: $accent;
+	}
+
+	.text-color-#{$sname} {
+		color: $value !important;
+	}
+
+	.border-color-#{$sname} {
+		border-color: $value !important;
+	}
+
+	@include pallete-raise-tags-if-not-nested();
+}
+
+/**
+* Defines a new color for the current pallete.
+*
+* Also defines lighten and darken variations of the color.
+*
+* @param {String} $name - The name of the color.
+* @param {Color} $value - The value of the color.
+* @param {Color} $accent - A color that contrast with the new color.
+* @param {Color} $laccent - A version of `$accent` designed to be used with
+* lighten backgrounds.
+* @param {Color} $daccent - A version of `$accent` designed to be used with
+* darken backgrounds.
+*/
+@mixin pallete-color($name, $value, $accent, $laccent: #fff, $daccent: #000) {
+	$light: lighten($value, $pallete-light-constant);
+	$lighta: lighten($accent, $pallete-light-constant);
+	$dark: darken($value, $pallete-light-constant);
+	$darka: darken($accent, $pallete-light-constant);
+	$ll: lightness($light);
+	$ld: lightness($dark);
+
+	/* Flag for nested calls */
+	@include pallete-set-nested(true);
+
+	@if($ll > 50) {
+		$lighta: mix($accent, $daccent, (100 - $ll) / 3);
+	} @else {
+		$lighta: mix($accent, $laccent, $ll / 3);
+	}
+
+	@if($ld > 50) {
+		$darka: mix($accent, $daccent, (100 - $ld) / 3);
+	} @else {
+		$darka: mix($accent, $laccent, $ld / 3);
+	}
+
+	@include pallete-color-base($name, $value, $accent);
+
+	@include pallete-color-base(
+		unquote("light-#{$name}"),
+		$light,
+		$lighta
+	);
+
+	@include pallete-color-base(
+		unquote("dark-#{$name}"),
+		$dark,
+		$darka
+	);
+
+	/* Flag for nested calls */
+	@include pallete-set-nested(false);
+	@include pallete-raise-tags-if-not-nested();
+}

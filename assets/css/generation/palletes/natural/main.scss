@@ -1,0 +1,73 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+@import "../pallete";
+
+@include pallete-new(
+	$name: "Natural",
+	$prefix: "natural",
+	$description: "A simple, natural color pallete",
+	$authors: "Alejandro Linarez Rangel @alinarezrangel",
+	$url: "https://github.com/alinarezrangel/generation",
+	$version: "1.1.0",
+	$date: "2017-07-14"
+);
+
+@include pallete-tag("section", "Base colors");
+@include pallete-color("red", #F31212, #FFF);
+@include pallete-color("green", #12A312, #000);
+@include pallete-color("blue", #1212F3, #FFF);
+@include pallete-color("yellow", #F3F312, #000);
+@include pallete-color("pink", #FF12FF, #000);
+
+@include pallete-tag("section", "Extended colors");
+@include pallete-color("magenta", #A312A3, #FFF);
+@include pallete-color("cyan", #12A3A3, #000);
+@include pallete-color("purple", #700A90, #FFF);
+@include pallete-color("ember", #AC1A1A, #FFF);
+@include pallete-color("indigo", #18207A, #FFF);
+@include pallete-color("teal", #004D40, #FFF);
+@include pallete-color("orange", #FF9800, #000);
+@include pallete-color("brown", #795548, #000);
+
+@include pallete-tag("section", "Dark-core colors");
+@include pallete-color("darkred", #AA0A0A, #FFF);
+@include pallete-color("darkblue", #0A0AAA, #FFF);
+@include pallete-color("darkgreen", #056605, #FFF);
+
+@include pallete-tag("section", "Gray/Grey");
+@include pallete-color("grey", #888, #000);
+@include pallete-color("bluegrey", #88A, #000);
+@include pallete-color("greengrey", #8A8, #000);
+@include pallete-color("redgrey", #A88, #000);
+@include pallete-color("middlegrey", #555, #FFF);
+
+@include pallete-tag("section", "Deep colors");
+@include pallete-color("deepred", #FF0A0A, #000);
+@include pallete-color("deepblue", #0A0AFF, #FFF);
+@include pallete-color("deepgreen", #0AAA0A, #000);
+@include pallete-color("deeporange", #FF5722, #FFF);
+@include pallete-color("deepbrown", #3E2723, #FFF);
+
+@include pallete-tag("section", "Misc. colors");
+@include pallete-color("white", #FFF, #000);
+@include pallete-color("black", #000, #FFF);
+@include pallete-color("outset", #FFF, #000);
+
+@include pallete-tag("deprecated", "The `accent` color is deprecated");
+@include pallete-color("accent", #F0F, #000);

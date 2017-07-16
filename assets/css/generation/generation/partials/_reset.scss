@@ -1,0 +1,71 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+html, body {
+	padding: 0;
+	margin: 0;
+
+	font-size: $font-size-global;
+	font-weight: $font-regular;
+	font-family: $font-family-default;
+
+	color: $font-color-default;
+	background-color: $background-color-default;
+
+	width: 100%;
+	height: 100%;
+
+	box-sizing: content-box;
+}
+
+* {
+	color: inherit;
+	background-color: inherit;
+
+	box-sizing: content-box;
+}
+
+h1 {
+	font-weight: $font-weight-heading-l1;
+	font-size: $font-size-heading-l1;
+}
+
+h2 {
+	font-weight: $font-weight-heading-l2;
+	font-size: $font-size-heading-l2;
+}
+
+h3 {
+	font-weight: $font-weight-heading-l3;
+	font-size: $font-size-heading-l3;
+}
+
+h4 {
+	font-weight: $font-weight-heading-l4;
+	font-size: $font-size-heading-l4;
+}
+
+h5 {
+	font-weight: $font-weight-heading-l5;
+	font-size: $font-size-heading-l5;
+}
+
+h6 {
+	font-weight: $font-weight-heading-l6;
+	font-size: $font-size-heading-l6;
+}

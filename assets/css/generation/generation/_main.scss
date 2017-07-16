@@ -1,0 +1,60 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+@import "vendor/normalize";
+
+@import "partials/base";
+
+@import "partials/reset";
+// @import "partials/typography";
+@import "partials/abstract_box";
+@import "partials/box";
+@import "partials/flexbox";
+@import "partials/container";
+@import "partials/fcontainer";
+@import "partials/section";
+@import "partials/group";
+@import "partials/button_group";
+@import "partials/button";
+@import "partials/navigation";
+@import "partials/form";
+@import "partials/inputs";
+@import "partials/labels";
+@import "partials/fieldset";
+@import "partials/dropdown";
+@import "partials/card";
+@import "partials/tables";
+@import "partials/grid";
+@import "partials/modals";
+@import "partials/list";
+
+@import "utils/font_sizes";
+@import "utils/font_styles";
+@import "utils/text_align";
+@import "utils/block_align";
+@import "utils/mpb";
+@import "utils/wh";
+@import "utils/overflow";
+@import "utils/fx";
+@import "utils/falign";
+@import "utils/fdir";
+@import "utils/sw";
+@import "utils/hide_on";
+@import "utils/display";
+
+@import "../palletes/builtin";

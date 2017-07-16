@@ -1,0 +1,50 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Position styles utility classes.
+*
+* The old `.force-*` are obsolete and will be deleted on Generation 3, use
+* `.force-position-*` or `.position-*` instead.
+*
+* You should use `.force-position-*` instead of `.position-*` of the element
+* already have a `.position-*`: for example:
+*
+* ```
+* // In Pug:
+*
+* div#el1.box.position-absolute
+* div#el2.box
+*
+* // In JS:
+*
+* // This is valid
+* $("#el1").addClass("force-position-relative");
+* // This too
+* $("#el2").addClass("position-absolute");
+*
+* // But these are unespecified and might fail:
+* $("#el1").addClass("position-fixed");
+* $("#el2").removeClass("position-absolute").addClass("force-position-fixed");
+* ```
+*/
+
+.force-position-absolute, .position-absolute {position: absolute !important;}
+.force-position-relative, .position-relative {position: relative !important;}
+.force-position-fixed,    .position-fixed    {position: fixed    !important;}
+.force-position-static,   .position-static   {position: static   !important;}

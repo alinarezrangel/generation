@@ -1,0 +1,75 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* A modified version of box that uses a flexible model.
+*
+* The flexible model is more dynamic than the block model, this can be used
+* to created highly-dynamic, responsible layouts that works well on almost
+* all recent browsers.
+*
+* The `.flexible` class is obsolete, use `.flexbox` instead.
+*/
+.flexbox, .flexible {
+	@extend .abstract-box;
+
+	display: flex;
+}
+
+/**
+* Aligns any flexible block to the left.
+*
+* Equal to `.direction-row.justify-start`.
+*
+* Note that unlike `.direction-row.justify-start`, this not uses `!important`
+* so the value can get overrided by other classes.
+*/
+.left {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+/**
+* Aligns any flexible block to the right.
+*
+* Equal to `.direction-row.justify-end`.
+*
+* Note that unlike `.direction-row.justify-end`, this not uses `!important` so
+* the value can get overrided by other classes.
+*/
+.right {
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+/**
+* Aligns any flexible block to the center.
+*
+* Equal to `.direction-column.justify-center`.
+*
+* Note that unlike `.direction-column.justify-center`, this not uses
+* `!important` so the value can get overrided by other classes.
+*/
+.center {
+	flex-direction: column;
+	justify-content: center;
+
+	& > *, & > .centerme {
+		margin: auto;
+	}
+}

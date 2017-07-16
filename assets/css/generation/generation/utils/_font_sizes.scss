@@ -1,0 +1,176 @@
+/**************************************
+* Generation: A CSS3 Based framework. *
+***************************************
+   Copyright 2016 Alejandro Linarez Rangel
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+**************************************/
+
+/**
+* Utility classes `.font-size` and `.text-`.
+*
+* All `.text-*` classes are obsolete and should be replaced by the new
+* `.font-size-*` classes.
+*/
+
+.text-tiny, .text-xsmall, .font-size-ultra-small {
+	font-size: $font-size-sm-usmall !important;
+}
+
+.text-small, .font-size-small {
+	font-size: $font-size-sm-small !important;
+}
+
+.text-normal, .font-size-regular {
+	font-size: $font-size-sm-regular !important;
+}
+
+.text-big, .font-size-big {
+	font-size: $font-size-sm-big !important;
+}
+
+.text-ultra-big, .font-size-ultra-big {
+	font-size: $font-size-sm-ubig !important;
+}
+
+.text-large, .font-size-large {
+	font-size: $font-size-sm-large !important;
+}
+
+.text-xlarge, .font-size-ultra-large {
+	font-size: $font-size-sm-ularge !important;
+}
+
+.text-jumbo, .text-jumbo-1, .font-size-jumbo {
+	font-size: $font-size-sm-jumbo !important;
+}
+
+.text-jumbo-2, .font-size-ultra-jumbo {
+	font-size: $font-size-sm-ujumbo !important;
+}
+
+.text-jumbo-3, .font-size-extreme {
+	font-size: $font-size-sm-extreme !important;
+}
+
+.text-jumbo-4, .font-size-ultra-extreme {
+	font-size: $font-size-sm-uextreme !important;
+}
+
+.text-jumbo-5, .font-size-mega {
+	font-size: $font-size-sm-mega !important;
+}
+
+/* NOTE: Special values for medium and large screens */
+
+/* When the size is medium */
+@include apply-on-size(medium) {
+	.text-tiny, .text-xsmall, .font-size-ultra-small {
+		font-size: $font-size-md-usmall !important;
+	}
+
+	.text-small, .font-size-small {
+		font-size: $font-size-md-small !important;
+	}
+
+	.text-normal, .font-size-regular {
+		font-size: $font-size-md-regular !important;
+	}
+
+	.text-big, .font-size-big {
+		font-size: $font-size-md-big !important;
+	}
+
+	.text-ultra-big, .font-size-ultra-big {
+		font-size: $font-size-md-ubig !important;
+	}
+
+	.text-large, .font-size-large {
+		font-size: $font-size-md-large !important;
+	}
+
+	.text-xlarge, .font-size-ultra-large {
+		font-size: $font-size-md-ularge !important;
+	}
+
+	.text-jumbo, .text-jumbo-1, .font-size-jumbo {
+		font-size: $font-size-md-jumbo !important;
+	}
+
+	.text-jumbo-2, .font-size-ultra-jumbo {
+		font-size: $font-size-md-ujumbo !important;
+	}
+
+	.text-jumbo-3, .font-size-extreme {
+		font-size: $font-size-md-extreme !important;
+	}
+
+	.text-jumbo-4, .font-size-ultra-extreme {
+		font-size: $font-size-md-uextreme !important;
+	}
+
+	.text-jumbo-5, .font-size-mega {
+		font-size: $font-size-md-mega !important;
+	}
+}
+
+/* When the size is large */
+@include apply-on-size(large) {
+	.text-tiny, .text-xsmall, .font-size-ultra-small {
+		font-size: $font-size-usmall !important;
+	}
+
+	.text-small, .font-size-small {
+		font-size: $font-size-small !important;
+	}
+
+	.text-normal, .font-size-regular {
+		font-size: $font-size-regular !important;
+	}
+
+	.text-big, .font-size-big {
+		font-size: $font-size-big !important;
+	}
+
+	.text-ultra-big, .font-size-ultra-big {
+		font-size: $font-size-ubig !important;
+	}
+
+	.text-large, .font-size-large {
+		font-size: $font-size-large !important;
+	}
+
+	.text-xlarge, .font-size-ultra-large {
+		font-size: $font-size-ularge !important;
+	}
+
+	.text-jumbo, .text-jumbo-1, .font-size-jumbo {
+		font-size: $font-size-jumbo !important;
+	}
+
+	.text-jumbo-2, .font-size-ultra-jumbo {
+		font-size: $font-size-ujumbo !important;
+	}
+
+	.text-jumbo-3, .font-size-extreme {
+		font-size: $font-size-extreme !important;
+	}
+
+	.text-jumbo-4, .font-size-ultra-extreme {
+		font-size: $font-size-uextreme !important;
+	}
+
+	.text-jumbo-5, .font-size-mega {
+		font-size: $font-size-mega !important;
+	}
+}
