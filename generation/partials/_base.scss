@@ -116,7 +116,7 @@ $font-size-heading-l6: $font-size-ubig;
 /**
 * Padding for some elements.
 */
-$padding-default: 4px; /// Default padding for boxes and children of them.
+$padding-default: 0px; /// Default padding for boxes and children of them.
 $padding-container: 8px; /// Padding for the `.container` class.
 $padding-button: 8px 16px; /// Padding for any `.button`.
 $padding-navigation: 8px 16px; /// Padding for links on a `.navigation`.
@@ -128,11 +128,12 @@ $padding-table: 0; /// Padding for `.table`s.
 /**
 * Margin for some elements.
 */
-$margin-default: 4px; /// Default margin for the boxes and children of them.
+$margin-default: 0px; /// Default margin for the boxes and children of them.
 $margin-container: 8px; /// Margin for the `.container` class.
 $margin-button: auto; /// Margin of a `.button`.
 $margin-button-group: 4px; /// Margin of a `.button-group` group.
 $margin-fieldset: 0.75em 0.32em; /// Margin of a `.fieldset`.
+$margin-list: 16px;
 $margin-between-lists: 6px; /// Margin between list's items (`.list`).
 $margin-between-lists-left: 32px; /// Margin to the left in DL lists (`.list`).
 $margin-between-lists-bottom: 4px; /// Margin to the bottom in DL lists.

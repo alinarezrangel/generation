@@ -17,22 +17,20 @@
 **************************************/
 
 /**
-* A class for all sections on a document, where the sections are stacked on
-* the bottom of another.
+* Specialization of container for footer.
 *
-* This class differences from container in that it removes padding and adds
-* extra bottom margin for an easy display of many stacked sections.
+* Removes the margin provided by the container class (like in the header class).
 */
-.section {
+.footer {
 	@extend .container;
 
-	padding: 0;
-	margin-bottom: $margin-container * 2;
+	padding: $padding-container;
+	margin: 0;
 }
 
-.fsection {
+.ffooter {
 	@extend .fcontainer;
 
-	padding: 0;
-	margin-bottom: $margin-container * 2;
+	padding: $padding-container;
+	margin: 0;
 }
