@@ -7,17 +7,23 @@ title: Generation Blog
 		<h2>{{ page.title }}</h2>
 	</header>
 	<section class="container">
-		<ul class="list">
-			{% for post in site.posts %}
-				<li>
-					<time datetime="{{ post.date | date_to_string }}">
-						{{ post.date | date_to_string }}
-					</time>
-					»
-					<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-				</li>
-			{% endfor %}
-		</ul>
+		{% for post in site.posts %}
+			<article class="section no-padding border bs-2 border-color-tree">
+				<header class="header container no-margin color-tree">
+					<h2 class="font-size-large margin-8">{{ post.title }}</h2>
+					<div class="box">
+						Published on
+						<time datetime="{{ post.date | date_to_string }}">
+							{{ post.date | date_to_string }}
+						</time>
+					</div>
+				</header>
+				<section class="container excerpt">
+					{{ post.excerpt }}
+					<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">Read more!</a>
+				</section>
+			</article>
+		{% endfor %}
 	</section>
 </section>
 

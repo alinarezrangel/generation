@@ -1,0 +1,32 @@
+---
+layout: docpage
+title: API Reference
+permalink: /docs/api-reference/
+---
+
+<h2 class="font-size-large">List of pages</h2>
+
+<ul class="list no-style margin-32">
+	{% assign navlist = site.data.indexes.apiref.index | sort: "weight" %}
+	{% for menu in navlist %}
+		<li class="padding-16 margin-16">
+			<a href="{{ site.baseurl }}{{ menu.link }}" class="font-size-big">
+				{{ menu.title }}
+			</a>
+
+			{% if menu.subindex[0] %}
+				{% assign snavlist = menu.subindex | sort: "weight" %}
+				<ul class="list margin-left-64">
+					{% for smenu in snavlist %}
+						<li class="padding-8 margin-8">
+							<a href="{{ site.baseurl }}{{ smenu.link }}" class="font-size-regular">
+								{{ smenu.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+	{% endfor %}
+</ul>
+

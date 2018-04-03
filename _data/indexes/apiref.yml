@@ -1,0 +1,62 @@
+index:
+  - title: "Class List"
+    link: "/docs/api-reference/class-list"
+    weight: 1
+    subindex:
+      - title: "Element classes"
+        link: "/docs/api-reference/class-list#element-classes"
+        weight: 1
+      - title: "Utility classes"
+        link: "/docs/api-reference/class-list#utility-classes"
+        weight: 2
+      - title: "Special classes"
+        link: "/docs/api-reference/class-list#special-classes"
+        weight: 3
+  - title: "Element List"
+    link: "/docs/api-reference/element-list"
+    weight: 2
+    subindex:
+      - title: "Elements that inherit the abstract-box class"
+        link: "/docs/api-reference/element-list#inherit-abstract-box"
+        weight: 1
+      - title: "Elements that inherit the box class"
+        link: "/docs/api-reference/element-list#inherit-box"
+        weight: 2
+      - title: "Elements that inherit the flexbox class"
+        link: "/docs/api-reference/element-list#inherit-flexbox"
+        weight: 3
+      - title: "Elements that aren't a box"
+        link: "/docs/api-reference/element-list#no-inherit"
+        weight: 4
+  - title: "Utilities List"
+    link: "/docs/api-reference/utilities-list"
+    weight: 3
+    subindex:
+      - title: "General utilities"
+        link: "/docs/api-reference/utilities-list#general"
+        weight: 1
+      - title: "Box utilities"
+        link: "/docs/api-reference/utilities-list#box"
+        weight: 2
+      - title: "Flexbox utilities"
+        link: "/docs/api-reference/utilities-list#flexbox"
+        weight: 3
+  #- title: "Elements Reference"
+  #  link: "/docs/api-reference/elements-reference"
+  #  weight: 4
+  - title: "JavaScript Core"
+    link: "/docs/api-reference/javascript-core"
+    weight: 5
+    subindex:
+      - title: "Modals"
+        link: "/docs/api-reference/javascript-core#modals"
+        weight: 1
+      - title: "Tabs (experimental)"
+        link: "/docs/api-reference/javascript-core#tabs"
+        weight: 2
+  - title: "Color Palletes API"
+    link: "/docs/color-palletes"
+    weight: 6
+  - title: "Wiki"
+    link: "/docs/wiki"
+    weight: 7

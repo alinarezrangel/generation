@@ -1,0 +1,30 @@
+navigation:
+  - title: "Home"
+    link: "/"
+    weight: 1
+  - title: "About"
+    link: "/about"
+    weight: 2
+  - title: "Documentation"
+    link: "/docs"
+    weight: 3
+    subnavigation:
+      - title: "API Reference"
+        link: "/docs/api-reference"
+        weight: 1
+      - title: "Tutorials"
+        link: "/docs/tutorials"
+        weight: 2
+      - title: "Wiki"
+        link: "/docs/wiki"
+        weight: 3
+      - title: "Color Palletes"
+        link: "/docs/color-palletes"
+        weight: 4
+  - title: "Blog"
+    link: "/blog"
+    weight: 4
+  - title: "Download"
+    link: "/download"
+    weight: 5
+    highlight: yes

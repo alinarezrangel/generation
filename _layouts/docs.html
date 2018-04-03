@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>{{ page.title }} | Documentation | {{ site.title }}</title>
+
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/generation/css/generation.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/generation/css/basics/main.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/generation/css/natural/main.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/hightlight.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/own.css" />
+		<script type="application/javascript" src="{{ site.baseurl }}/assets/css/generation/js/generation.js"></script>
+	</head>
+	<body class="flexbox no-padding no-margin direction-column">
+		<nav class="top navigation no-margin color-dark-aqua text-color-white font-style-bold od-1">
+			<!--
+				The hidden span tags are for better style when the page is accesed via text
+				browsers, but are aria-hidden for accesibility reasons:
+			-->
+
+			{% if site.data.navs.main.navigation[0] %}
+				{% assign navlist = site.data.navs.docs.navigation | sort: "weight" %}
+				{% for menu in navlist %}
+					{% if menu.subnavigation[0] %}
+						<div class="dropdown link">
+							<a href="{{ site.baseurl }}{{ menu.link }}"> {{ menu.title }} </a>
+
+							<span class="hidden" aria-hidden="true">«</span>
+
+							{% if menu.subnavigation[0] %}
+								<div class="dropdown-content card">
+									<div class="side navigation no-margin">
+										{% assign snavlist = menu.subnavigation | sort: "weight" %}
+										{% for smenu in snavlist %}
+											<a href="{{ site.baseurl }}{{ smenu.link }}">{{ smenu.title }}</a>
+										{% endfor %}
+									</div>
+								</div>
+							{% endif %}
+
+							<span class="hidden" aria-hidden="true">»</span>
+						</div>
+					{% else %}
+						{% if menu.highlight %}
+							<a href="{{ site.baseurl }}{{ menu.link }}" class="color-natural-indigo"> {{ menu.title }} </a>
+						{% else %}
+							<a href="{{ site.baseurl }}{{ menu.link }}"> {{ menu.title }} </a>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+
+			<!-- <a href=""></a> <span class="hidden" aria-hidden="true"> | </span> -->
+		</nav>
+
+		<main class="main container fx-1 od-2">
+
+			{{ content }}
+
+		</main> <!-- main container -->
+
+		<footer class="container no-margin color-dark-aqua text-color-white od-3 padding-32">
+			{% include footer.html %}
+		</footer>
+	</body>
+</html>
+

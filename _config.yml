@@ -25,9 +25,13 @@ github_username:  alinarezrangel
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
+#theme: default
+plugins:
   - jekyll-feed
+
+kramdown:
+  input: GFM
+  auto_ids: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

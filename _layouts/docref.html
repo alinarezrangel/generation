@@ -1,0 +1,29 @@
+---
+layout: docs
+---
+
+<header class="container no-margin">
+	<h1 class="text-center">{{ page.title }}</h1>
+</header>
+
+<section class="container padding-32">
+	<div class="container back-to-ref border-bottom bs-2">
+		<a href="{{ site.baseurl }}/docs/api-reference/class-list">
+			Back to reference
+		</a>
+	</div>
+
+	<div class="row wrap">
+		<section class="od-1 fx-3 margin-16 container padding-32">
+			{{ content }}
+		</section>
+
+		<nav class="fx-1 side navigation od-2 border-round bs-1 border">
+			<h2 class="text-center font-size-ultra-big">See Also</h2>
+			{% assign seealso = page.seealso %}
+			{% for item in seealso %}
+				<a href="{{ item.link }}"><code>{{ item.text }}</code></a>
+			{% endfor %}
+		</nav>
+	</div>
+</section>

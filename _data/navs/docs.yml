@@ -1,0 +1,43 @@
+navigation:
+  - title: "Home"
+    link: "/docs/"
+    weight: 1
+    subnavigation:
+      - title: "Main Page"
+        link: "/"
+        weight: 1
+      - title: "Docs Home"
+        link: "/docs"
+        weight: 1
+  - title: "API Reference"
+    link: "/docs/api-reference"
+    weight: 2
+    subnavigation:
+      - title: "Class List"
+        link: "/docs/api-reference/class-list"
+        weight: 1
+      - title: "Element List"
+        link: "/docs/api-reference/element-list"
+        weight: 2
+      - title: "Utilities List"
+        link: "/docs/api-reference/utilities-list"
+        weight: 3
+      #- title: "Elements Reference"
+      #  link: "/docs/api-reference/elements-reference"
+      #  weight: 4
+      - title: "JavaScript Core"
+        link: "/docs/api-reference/javascript-core"
+        weight: 5
+  - title: "Tutorials"
+    link: "/docs/tutorials"
+    weight: 3
+  - title: "Wiki"
+    link: "/docs/wiki"
+    weight: 4
+  - title: "Color Palletes"
+    link: "/docs/color-palletes"
+    weight: 5
+  - title: "Download"
+    link: "/download"
+    weight: 6
+    highlight: yes

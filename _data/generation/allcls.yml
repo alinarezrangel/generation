@@ -1,0 +1,6 @@
+index:
+  elements:
+    - name: "Abstract Box"
+      selector: ".abstract-box"
+      tags:
+        - ""

@@ -4,15 +4,24 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Generation is a powerful CSS3 & HTML5 framework which makes use of modern web
+technologies to create beutiful responsive web pages and applications without
+writting lots of boilerplate CSS. Generation have three (3) main libraries:
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+1. The elements library: This provides the basic elements for the page/app,
+like modals, containers, lists, grids, dropdowns and others. For example,
+the `.container` class creates a container element.
+2. The utility library: This provides classes that only change the aspect of
+any element. For example, the `.no-padding` class removes any padding on the
+element and the `.font-size-mega` sets the font size to a really big value
+(perfect for titles).
+3. The color library: This defines a set of colors grouped on
+*Color Palletes*, these paletes are easy to create, modify and use.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+One of the main goals of Generation is to provide a powerful framework in
+which the CSS written is minimal.
 
 
-[jekyll-organization]: https://github.com/jekyll
+Generation is licensed under the [Apache 2.0 license][apache2].
+
+[apache2]: https://www.apache.org/licenses/LICENSE-2.0.html
