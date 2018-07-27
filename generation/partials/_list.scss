@@ -27,6 +27,8 @@
 */
 .list {
 	@extend .box;
+
+	margin: $margin-list 0 $margin-list 0;
 }
 
 ul.list:not(.no-style) {

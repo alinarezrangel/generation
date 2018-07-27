@@ -28,6 +28,9 @@
 .navigation {
 	@extend .box;
 
+	margin: 0;
+	padding: 0;
+
 	& > a, & > .link {
 		display: inline-block;
 		cursor: pointer;
