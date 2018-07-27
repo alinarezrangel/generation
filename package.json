@@ -24,11 +24,11 @@
   "homepage": "https://github.com/alinarezrangel/generation#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-clean-css": "^3.7.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
+    "gulp-sourcemaps": "^2.6.4"
   },
   "dependencies": {
     "rimraf": "^2.6.1"

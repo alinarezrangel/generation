@@ -1,45 +1,14 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var sourcemaps = require("gulp-sourcemaps");
-var autoprefixer = require("autoprefixer");
-var cleanCSS = require("gulp-clean-css");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const sourcemaps = require("gulp-sourcemaps");
+const autoprefixer = require("autoprefixer");
+const cleanCSS = require("gulp-clean-css");
 
-var fs = require("fs");
-var rimraf = require("rimraf");
+const fs = require("fs");
+const rimraf = require("rimraf");
 
-gulp.task("sass:core", ["prepare"], function () {
-	return gulp.src("./generation/**/*.scss")
-		.pipe(sass().on("error", sass.logError))
-		.pipe(gulp.dest("./out"));
-});
-
-gulp.task("sass:watch:core", ["prepare"], function () {
-	gulp.watch("./generation/**/*.scss", ["sass:core"]);
-});
-
-gulp.task("sass:palletes", ["prepare"], function () {
-	return gulp.src("./palletes/**/*.scss")
-		.pipe(sass().on("error", sass.logError))
-		.pipe(gulp.dest("./out"));
-});
-
-gulp.task("sass:watch:palletes", ["prepare"], function () {
-	gulp.watch("./palletes/**/*.scss", ["sass:palletes"]);
-});
-
-gulp.task("autoprefixer", ["prepare", "sass:core", "sass:palletes"], function()
-{
-	return gulp.src("./out/**/*.css")
-		.pipe(sourcemaps.init())
-		.pipe(postcss([autoprefixer()]))
-		.pipe(cleanCSS())
-		.pipe(sourcemaps.write("."))
-		.pipe(gulp.dest("./css/"));
-});
-
-gulp.task("prepare", function(cll)
-{
+function prepare(cll) {
 	fs.mkdir("out", function(err)
 	{
 		if(err)
@@ -58,7 +27,49 @@ gulp.task("prepare", function(cll)
 
 		return cll();
 	});
+}
+
+function sass_core() {
+	return gulp.src("./generation/**/*.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(gulp.dest("./out"));
+}
+
+function sass_palletes() {
+	return gulp.src("./palletes/**/*.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(gulp.dest("./out"));
+}
+
+function task_autoprefixer() {
+	return gulp.src("./out/**/*.css")
+		.pipe(sourcemaps.init())
+		.pipe(postcss([autoprefixer()]))
+		.pipe(cleanCSS())
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("./css/"));
+}
+
+const prepare_sass_core = gulp.series(prepare, sass_core)
+const prepare_sass_palletes = gulp.series(prepare_sass_core, sass_palletes)
+const prepare_autoprefixer =
+	gulp.series(prepare, sass_core, sass_palletes, task_autoprefixer)
+
+gulp.task("sass:core", prepare_sass_core);
+
+gulp.task("sass:watch:core", function () {
+	gulp.watch("./generation/**/*.scss", prepare_sass_core);
 });
+
+gulp.task("sass:palletes", prepare_sass_palletes);
+
+gulp.task("sass:watch:palletes", function () {
+	gulp.watch("./palletes/**/*.scss", prepare_sass_palletes);
+});
+
+gulp.task("autoprefixer", prepare_autoprefixer);
+
+gulp.task("prepare", prepare);
 
 gulp.task("clean", function(cll)
 {
@@ -82,7 +93,8 @@ gulp.task("clean", function(cll)
 	});
 });
 
-gulp.task("default", ["prepare", "sass:core", "sass:palletes", "autoprefixer"], function()
-{
-	console.log("Generation is now builded");
-});
+gulp.task("default", gulp.series(
+	prepare_sass_core,
+	prepare_sass_palletes,
+	prepare_autoprefixer
+));
